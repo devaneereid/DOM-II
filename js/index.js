@@ -33,6 +33,7 @@ test.addEventListener("mouseover", (event) => {
     }, 500);
 }, false);
 
+
 // Click
 const contentSect = document.querySelector(".intro");
 contentSect.addEventListener('click', (event) => {
@@ -43,34 +44,71 @@ contentSect.addEventListener('click', (event) => {
 });
 
 
-// Scroll
-// window.addEventListener("scroll", (e) =>{
-//     document.querySelector(".main-navigation").style.backgroundColor
-// })
+// KeyDown 
+const body = document.querySelector('body');
+body.addEventListener('keydown', (event) => {
+    body.style.backgroundColor = 'aqua';
+})
 
-const buttons = document.querySelector(".btn");
+
+// KeyUp
+body.addEventListener('keyup', (event) => {
+    body.style.backgroundColor= 'pink';
+})
+
+// DoubleClick
+const footer = document.querySelector('footer');
+footer.addEventListener('dblclick', (e) => {
+    footer.classList.toggle('large');
+});
+
+
+// MouseEnter 
+const buttons = document.querySelector(".destination");
 
 buttons.forEach("mouseenter", (event) => {
     alert(event.target);
     event.target.style.transform = "scale(1.5)"
     event.target.style.transition = "all 0.3s";
 })
+// MouseLeave
 buttons.forEach("mouseleave", (event) => {
     event.target.style.transform= "scale(1.0)";
     event.target.style.transition = "all 0.3s"
 });
 
 
-const body = document.querySelector(".content-destination");
-body.addEventListener("click", () => {
-    body.style.backgroundColor="purple";
-    console.log("end")
-})
-const imgGroup = document.querySelector(".content-pick");
-imgGroup.addEventListener('click', (event) => {
-    imgGroup.style.backgroundColor="aqua";
-    console.log("middle")
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Scroll
+// window.addEventListener("scroll", (e) =>{
+//     document.querySelector(".main-navigation").style.backgroundColor
+// })
+
+
+
+
+// const body = document.querySelector(".content-destination");
+// body.addEventListener("click", () => {
+//     body.style.backgroundColor="purple";
+//     console.log("end")
+// })
+// const imgGroup = document.querySelector(".content-pick");
+// imgGroup.addEventListener('click', (event) => {
+//     imgGroup.style.backgroundColor="aqua";
+//     console.log("middle")
+// });
 
 
 
@@ -83,112 +121,6 @@ imgGroup.addEventListener('click', (event) => {
 //     link.style.transform = "scale(1.5)"
 //     link.style.transition = "all 0.3";
 // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Drag
-// var dragged;
-
-// document.addEventListener("drag", (event) => {
-
-// }, false);
-
-// document.addEventListener("dragstart", (event) => {
-//     dragged = event.target;
-//     event.target.style.opacity = .5;
-// }, false);
-
-// document.addEventListener("dragend", (event) => {
-//     event.target.style.opacity = "";
-// }, false);
-
-
-// const boxes =
-// document.querySelectorAll('.content-destination');
-// boxes.forEach(box => {
-//     box.addEventListener('mouseover', (e) => {
-//         TweenMax.to(e.target, 0.5, {
-//         scale: 2,
-//         filter: 'none',
-//         ease: Elastic.eastOut.config(1, 0.75),
-//         yoyo: true,
-//         repeat: 1
-// })
-// })
-//    box.addEventListener('mouseleave', (e) => {
-//     TweenMax.to(e.target, 0.5, {
-//       scale: 1,
-//       filter: 'grayscale(1) blur(3px)',
-//       ease: Power1.easeIn
-//     })
-//   })
-// })
-
-
-// // Attempt at dblclick
-// const titles = document.querySelector("btn");
-
-// titles.addEventListener('dblclick', (e) => {
-//     titles.classList.toggle('large');
-//     console.log(event);
-// });
-
-
-
-
-
-
-
-
-
-
-
-// Scroll **????
-// let last_known_scroll_postition = 0;
-// let ticking = false;
-
-// function destinationImg(scroll_pos) {
-
-// }
-// window.addEventListener('scroll', (e) => {
-//     last_known_scroll_postition = window.scrollY;
-
-//     if (!ticking) {
-//         img.requstAnimationFrame( (e) => {
-//         destinationImg(last_known_scroll_postition);
-//         ticking= false;
-//         });
-//         ticking = true;
-//     }
-
-// });
-
-
-
-
-
-
-
-
-
-
-
 
 // **Attempt at Resize???
 // const heightOutput = document.querySelector('#height');
